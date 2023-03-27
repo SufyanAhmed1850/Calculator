@@ -12,15 +12,20 @@
     --btn-clr-: #18d4a3;
     --btn-back-: #212b41;
     --btn-simp-: #95a69f;
+    --active-simp-: #ffffff0e;
+    --btn-theme-: #d9faf3;
 }
 
 .lightTheme {
-    --screen-back-: #f4fdfb;
+    --screen-back-: #d9faf3;
     --screen-clr-: #373e47;
     --btn-wrapper-: #ffffff;
     --btn-clr-: #373e47;
-    --btn-back-: #f4fdfb;
+    --btn-back-: #d9faf3;
     --btn-simp-: #373e47;
+    --active-simp-: #0000000e;
+    --btn-theme-: #212b41;
+    font-weight: 500;
 }
 
 body {
@@ -83,14 +88,41 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    /* transition: transform ease-in-out 400ms; */
+    transition: all ease-in 150ms;
 }
 
-.buttonRow div:active {
-    transform: scale(.925);
+.buttonRow div:not(.cornerBtn):active {
+    background-color: var(--active-simp-);
+    border-radius: .6rem;
+}
+
+.cornerBtn:active {
+    border-radius: .6rem;
 }
 
 .cornerBtn {
     color: var(--btn-clr-);
     background-color: var(--btn-back-);
+}
+
+.equals{
+    color: var(--btn-back-);
+    background-color: #18d4a3;
+}
+
+.btnTheme{
+    cursor: pointer;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.fa-solid{
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    color: var(--btn-theme-);
+}
+
+.rot{
+    transform: rotate(180deg);
 }

@@ -1,6 +1,10 @@
 function setNumber(num) {
     var input = document.getElementById("number")
-    input.value = input.value + num
+    if (input.value == "undefined") {
+        input.value = ""
+    } else {
+        input.value += num
+    }
 }
 function ans() {
     var inputValue = document.getElementById("number")
@@ -14,4 +18,12 @@ function del() {
 function delAll() {
     var input = document.getElementById("number")
     input.value = ""
+}
+function rotate() {
+    var btnTheme = document.querySelector(".btnTheme")
+    btnTheme.classList.add('rot');
+}
+function theme() {
+    var element = document.body;
+    element.classList.toggle("lightTheme");
 }

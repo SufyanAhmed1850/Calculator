@@ -8,13 +8,17 @@
     <title>Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <section class="container">
         <div class="calc">
+            <div onclick="theme()" class="btnTheme"><i class="fa-solid fa-circle-half-stroke"></i></div>
             <div class="screen">
                 <input type="text" placeholder="0" id="number">
             </div>
@@ -44,10 +48,10 @@
                     <div onclick="setNumber('+')" class="cornerBtn">+</div>
                 </div>
                 <div class="buttonRow">
+                    <div onclick="setNumber('00')">00</div>
                     <div onclick="setNumber(0)">0</div>
                     <div onclick="setNumber('.')">.</div>
-                    <div></div>
-                    <div onclick="ans()" class="cornerBtn">=</div>
+                    <div onclick="ans()" class="cornerBtn equals">=</div>
                 </div>
             </div>
         </div>
