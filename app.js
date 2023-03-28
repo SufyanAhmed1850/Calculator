@@ -29,6 +29,8 @@ document.addEventListener("keydown", (event) => {
 
     if (event.key >= 0 && event.key <= 9) {
         setNumber(key)
+    } else if (event.key === ".") {
+        setNumber(".");
     } else if (event.key === "+") {
         setNumber("+");
     } else if (event.key === "-") {
