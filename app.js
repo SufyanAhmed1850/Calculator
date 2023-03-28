@@ -1,22 +1,19 @@
+var input = document.getElementById("number");
+
 function setNumber(num) {
-    var input = document.getElementById("number")
     if (input.value == "undefined") {
-        input.value = "" + num
-    } else {
-        input.value += num
+        input.value = ""
     }
+    input.value += num
 }
 function ans() {
-    var inputValue = document.getElementById("number")
-    var output = eval(inputValue.value)
-    inputValue.value = output
+    var output = eval(input.value)
+    input.value = output
 }
 function del() {
-    var input = document.getElementById("number")
     input.value = input.value.slice(0, -1)
 }
 function delAll() {
-    var input = document.getElementById("number")
     input.value = ""
 }
 function rotate() {
@@ -27,3 +24,24 @@ function theme() {
     var element = document.body;
     element.classList.toggle("lightTheme");
 }
+document.addEventListener("keydown", (event) => {
+    var key = event.key;
+
+    if (event.key >= 0 && event.key <= 9) {
+        setNumber(key)
+    } else if (event.key === "+") {
+        setNumber("+");
+    } else if (event.key === "-") {
+        setNumber("-");
+    } else if (event.key === "*") {
+        setNumber("*");
+    } else if (event.key === "/") {
+        setNumber("/");
+    } else if (event.key === "Enter") {
+        ans();
+    } else if (event.key === "Backspace") {
+        del();
+    } else if (event.key === "Escape") {
+        delAll();
+    }
+});
