@@ -10,8 +10,9 @@
     --btn-wrapper-: #2e3951;
     --btn-clr-: #18d4a3;
     --btn-back-: #212b41;
+    --btn-back-active-: #1b2438;
     --btn-simp-: #95a69f;
-    --active-simp-: #ffffff0e;
+    --active-simp-: #ffffff1f;
     --btn-theme-: #d9faf3;
 }
 .lightTheme {
@@ -20,8 +21,9 @@
     --btn-wrapper-: #ffffff;
     --btn-clr-: #373e47;
     --btn-back-: #d9faf3;
+    --btn-back-active-: #a8f7e6;
     --btn-simp-: #373e47;
-    --active-simp-: #0000001a;
+    --active-simp-: #0000001f;
     --btn-theme-: #212b41;
     font-weight: 500;
 }
@@ -76,6 +78,9 @@ body {
     border-radius: 50%;
     font-size: 1.25rem;
     cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     -webkit-tap-highlight-color: transparent;
     transition: all ease-in 200ms;
 }
@@ -83,8 +88,9 @@ body {
     background-color: var(--active-simp-);
     border-radius: .6rem;
 }
-.cornerBtn:active {
+.cornerBtn:not(.equals):active {
     border-radius: .6rem;
+    background-color: var(--btn-back-active-);
 }
 .cornerBtn {
     color: var(--btn-clr-);
@@ -93,6 +99,9 @@ body {
 .equals {
     color: var(--btn-back-);
     background-color: #18d4a3;
+}
+.equals:active{
+    border-radius: .6rem;
 }
 .btnTheme {
     cursor: pointer;
