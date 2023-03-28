@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-
 :root {
     --screen-back-: #212b41;
     --screen-clr-: #0db387;
@@ -15,7 +14,6 @@
     --active-simp-: #ffffff0e;
     --btn-theme-: #d9faf3;
 }
-
 .lightTheme {
     --screen-back-: #d9faf3;
     --screen-clr-: #373e47;
@@ -23,31 +21,27 @@
     --btn-clr-: #373e47;
     --btn-back-: #d9faf3;
     --btn-simp-: #373e47;
-    --active-simp-: #0000000e;
+    --active-simp-: #0000001a;
     --btn-theme-: #212b41;
     font-weight: 500;
 }
-
 body {
     background: #8b9296;
     background: -webkit-linear-gradient(45deg, #2c3e50, #8b9296);
     background: linear-gradient(45deg, #2c3e50, #8b9296);
 
 }
-
 .container {
     display: grid;
     place-items: center;
     height: 100vh;
 }
-
 .calc {
     width: 90%;
     max-width: 400px;
     border-radius: 1rem;
     overflow: hidden;
 }
-
 .screen input {
     width: 100%;
     border: none;
@@ -56,14 +50,13 @@ body {
     font-size: 2.5rem;
     background-color: var(--screen-back-);
     color: var(--screen-clr-);
+    pointer-events: none;
 }
-
 .buttonWrapper {
     width: 100%;
     background-color: var(--btn-wrapper-);
     padding-bottom: 1rem;
 }
-
 .buttonRow {
     display: flex;
     justify-content: space-around;
@@ -71,11 +64,9 @@ body {
     padding-top: 1rem;
     color: var(--btn-simp-);
 }
-
 .large {
     font-size: 1rem !important;
 }
-
 .buttonRow div {
     width: 60px;
     height: 60px;
@@ -85,44 +76,32 @@ body {
     border-radius: 50%;
     font-size: 1.25rem;
     cursor: pointer;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: all ease-in 150ms;
+    -webkit-tap-highlight-color: transparent;
+    transition: all ease-in 200ms;
 }
-
 .buttonRow div:not(.cornerBtn):active {
     background-color: var(--active-simp-);
     border-radius: .6rem;
 }
-
 .cornerBtn:active {
     border-radius: .6rem;
 }
-
 .cornerBtn {
     color: var(--btn-clr-);
     background-color: var(--btn-back-);
 }
-
-.equals{
+.equals {
     color: var(--btn-back-);
     background-color: #18d4a3;
 }
-
-.btnTheme{
+.btnTheme {
     cursor: pointer;
     font-size: 1.3rem;
     position: relative;
 }
-
-.fa-solid{
+.fa-solid {
     position: absolute;
-    top: .75rem;
-    right: .75rem;
+    top: 1rem;
+    right: 1rem;
     color: var(--btn-theme-);
-}
-
-.rot{
-    transform: rotate(180deg);
 }

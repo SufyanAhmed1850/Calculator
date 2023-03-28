@@ -1,7 +1,7 @@
 function setNumber(num) {
     var input = document.getElementById("number")
     if (input.value == "undefined") {
-        input.value = ""
+        input.value = "" + num
     } else {
         input.value += num
     }
