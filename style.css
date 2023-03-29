@@ -53,6 +53,7 @@ body {
     background-color: var(--screen-back-);
     color: var(--screen-clr-);
     pointer-events: none;
+    -webkit-user-select: none;
 }
 .buttonWrapper {
     width: 100%;
