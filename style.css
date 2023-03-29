@@ -54,6 +54,8 @@ body {
     color: var(--screen-clr-);
     pointer-events: none;
     -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .buttonWrapper {
     width: 100%;
