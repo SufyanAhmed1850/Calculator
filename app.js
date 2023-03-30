@@ -1,7 +1,7 @@
 var input = document.getElementById("number");
 
 function setNumber(num) {
-    if (input.value == "undefined") {
+    if (input.value.charCodeAt(0) >= 97 && input.value.charCodeAt(0) <= 122) {
         input.value = ""
     }
     input.value += num
