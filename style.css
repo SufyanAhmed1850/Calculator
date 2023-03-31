@@ -31,7 +31,6 @@ body {
     background: #8b9296;
     background: -webkit-linear-gradient(45deg, #2c3e50, #8b9296);
     background: linear-gradient(45deg, #2c3e50, #8b9296);
-
 }
 .container {
     display: grid;
@@ -85,7 +84,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    transition: all ease-in 200ms;
+    transition: all ease-in 100ms;
 }
 .buttonRow div:not(.cornerBtn):active {
     background-color: var(--active-simp-);

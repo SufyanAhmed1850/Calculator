@@ -18,7 +18,6 @@ function delAll() {
 }
 function rotate() {
     var btnTheme = document.querySelector(".btnTheme")
-    btnTheme.classList.add('rot');
 }
 function theme() {
     var element = document.body;
@@ -27,18 +26,8 @@ function theme() {
 document.addEventListener("keydown", (event) => {
     var key = event.key;
 
-    if (event.key >= 0 && event.key <= 9) {
+    if (event.key >= 0 && event.key <= 9 || event.key == "+" || event.key  == "-" || event.key  == "*" || event.key  == "/" || event.key  == "." || event.key  == "%") {
         setNumber(key)
-    } else if (event.key === ".") {
-        setNumber(".");
-    } else if (event.key === "+") {
-        setNumber("+");
-    } else if (event.key === "-") {
-        setNumber("-");
-    } else if (event.key === "*") {
-        setNumber("*");
-    } else if (event.key === "/") {
-        setNumber("/");
     } else if (event.key === "Enter") {
         ans();
     } else if (event.key === "Backspace") {
