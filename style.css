@@ -38,7 +38,7 @@ body {
     height: 100vh;
 }
 .calc {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     border-radius: 1rem;
     overflow: hidden;
@@ -55,6 +55,8 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 .buttonWrapper {
     width: 100%;
@@ -84,7 +86,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    transition: all ease-in 100ms;
+    transition: all ease-in 250ms;
 }
 .buttonRow div:not(.cornerBtn):active {
     background-color: var(--active-simp-);
@@ -102,7 +104,7 @@ body {
     color: var(--btn-back-);
     background-color: #18d4a3;
 }
-.equals:active{
+.equals:active {
     border-radius: .6rem;
 }
 .btnTheme {
@@ -115,4 +117,12 @@ body {
     top: 1rem;
     right: 1rem;
     color: var(--btn-theme-);
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        height: auto;
+    }
+    .calc {
+        border-radius: 0;
+    }
 }
