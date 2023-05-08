@@ -1,5 +1,4 @@
 var input = document.getElementById("number");
-
 function setNumber(num) {
     if (input.value.charCodeAt(0) >= 97 && input.value.charCodeAt(0) <= 122) {
         input.value = ""
@@ -25,16 +24,12 @@ function del() {
 function delAll() {
     input.value = ""
 }
-function rotate() {
-    var btnTheme = document.querySelector(".btnTheme")
-}
 function theme() {
     var element = document.body;
     element.classList.toggle("lightTheme");
 }
 document.addEventListener("keydown", (event) => {
     var key = event.key;
-
     if (event.key >= 0 && event.key <= 9 || event.key == "+" || event.key == "-" || event.key == "*" || event.key == "/" || event.key == "." || event.key == "%") {
         setNumber(key)
     } else if (event.key === "Enter") {
