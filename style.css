@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
 :root {
     --screen-back-: #212b41;
     --screen-clr-: #0db387;
@@ -15,6 +16,7 @@
     --active-simp-: #ffffff1f;
     --btn-theme-: #d9faf3;
 }
+
 .lightTheme {
     --screen-back-: #d9faf3;
     --screen-clr-: #373e47;
@@ -27,22 +29,26 @@
     --btn-theme-: #212b41;
     font-weight: 500;
 }
+
 body {
     background: #8b9296;
     background: -webkit-linear-gradient(45deg, #2c3e50, #8b9296);
     background: linear-gradient(45deg, #2c3e50, #8b9296);
 }
+
 .container {
     display: grid;
     place-items: center;
     height: 100vh;
 }
+
 .calc {
     width: 100%;
     max-width: 400px;
     border-radius: 1rem;
     overflow: hidden;
 }
+
 .screen input {
     width: 100%;
     border: none;
@@ -58,11 +64,13 @@ body {
     overflow-x: auto;
     white-space: nowrap;
 }
+
 .buttonWrapper {
     width: 100%;
     background-color: var(--btn-wrapper-);
     padding-bottom: 1rem;
 }
+
 .buttonRow {
     display: flex;
     justify-content: space-around;
@@ -70,9 +78,11 @@ body {
     padding-top: 1rem;
     color: var(--btn-simp-);
 }
+
 .large {
     font-size: 1rem !important;
 }
+
 .buttonRow div {
     width: 60px;
     height: 60px;
@@ -88,41 +98,40 @@ body {
     -webkit-tap-highlight-color: transparent;
     transition: all ease-in 250ms;
 }
+
 .buttonRow div:not(.cornerBtn):active {
     background-color: var(--active-simp-);
     border-radius: .6rem;
 }
+
 .cornerBtn:not(.equals):active {
     border-radius: .6rem;
     background-color: var(--btn-back-active-);
 }
+
 .cornerBtn {
     color: var(--btn-clr-);
     background-color: var(--btn-back-);
 }
+
 .equals {
     color: var(--btn-back-);
     background-color: #18d4a3;
 }
+
 .equals:active {
     border-radius: .6rem;
 }
+
 .btnTheme {
     cursor: pointer;
     font-size: 1.3rem;
     position: relative;
 }
+
 .fa-solid {
     position: absolute;
     top: 1rem;
     right: 1rem;
     color: var(--btn-theme-);
-}
-@media only screen and (max-width: 400px) {
-    .container {
-        height: auto;
-    }
-    .calc {
-        border-radius: 0;
-    }
 }
